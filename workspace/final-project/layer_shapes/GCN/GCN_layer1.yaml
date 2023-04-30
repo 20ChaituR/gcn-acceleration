@@ -1,0 +1,25 @@
+problem:
+  instance:
+    I: 34
+    O: 16
+    N: 34
+  shape:
+    data-spaces:
+      - name: Inputs
+        projection:
+          - - - N
+          - - - I
+      - name: Weights
+        projection:
+          - - - I
+          - - - O
+      - name: Support
+        projection:
+          - - - N
+          - - - O
+        read-write: true
+    dimensions:
+      - I
+      - O
+      - N
+    name: GCN-LayerSupport

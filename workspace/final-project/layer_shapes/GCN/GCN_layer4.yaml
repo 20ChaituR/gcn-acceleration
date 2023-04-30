@@ -1,0 +1,23 @@
+problem:
+  instance:
+    O: 4
+    N: 34
+  shape:
+    data-spaces:
+      - name: Adj
+        projection:
+          - - - N
+          - - - N
+      - name: Support
+        projection:
+          - - - N
+          - - - O
+      - name: Output
+        projection:
+          - - - N
+          - - - O
+        read-write: true
+    dimensions:
+      - O
+      - N
+    name: GCN-LayerOutput
