@@ -1,0 +1,74 @@
+mapping:
+  - target: output_activation_reg
+    type: datatype
+    keep:
+      - Outputs
+    bypass:
+      - Inputs
+      - Weights
+  - target: input_activation_reg
+    type: datatype
+    keep:
+      - Inputs
+    bypass:
+      - Weights
+      - Outputs
+  - target: weights_reg
+    type: datatype
+    keep:
+      - Weights
+    bypass:
+      - Inputs
+      - Outputs
+  - target: scratchpad
+    type: datatype
+    keep:
+      - Outputs
+    bypass:
+      - Inputs
+      - Weights
+  - target: global_buffer
+    type: datatype
+    keep:
+      - Inputs
+      - Weights
+      - Outputs
+    bypass:
+      []
+  - target: DRAM
+    type: datatype
+    keep:
+      - Inputs
+      - Weights
+      - Outputs
+    bypass:
+      []
+  - target: output_activation_reg
+    type: temporal
+    factors: I1 O1 N1
+    permutation: ION
+  - target: input_activation_reg
+    type: temporal
+    factors: I1 O1 N1
+    permutation: ION
+  - target: weights_reg
+    type: temporal
+    factors: I1 O1 N1
+    permutation: ION
+  - target: scratchpad
+    type: temporal
+    factors: I17 O1 N1
+    permutation: ION
+  - target: global_buffer
+    type: spatial
+    factors: I2 O4 N1
+    permutation: ION
+    split: 1
+  - target: global_buffer
+    type: temporal
+    factors: I1 O1 N1
+    permutation: ION
+  - target: DRAM
+    type: temporal
+    factors: I1 O1 N34
+    permutation: NIO

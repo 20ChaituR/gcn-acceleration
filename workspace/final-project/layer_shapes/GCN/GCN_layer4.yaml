@@ -1,23 +1,25 @@
 problem:
   instance:
+    I: 34
     O: 4
     N: 34
   shape:
     data-spaces:
-      - name: Adj
+      - name: Inputs
         projection:
+          - - - I
           - - - N
-          - - - N
-      - name: Support
+      - name: Weights
         projection:
           - - - N
           - - - O
-      - name: Output
+      - name: Outputs
         projection:
-          - - - N
+          - - - I
           - - - O
         read-write: true
     dimensions:
+      - I
       - O
       - N
     name: GCN-LayerOutput

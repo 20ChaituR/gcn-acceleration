@@ -16,26 +16,21 @@ logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
 class ConfigRegistry:
-    DESIGN_DIR     = Path('designs')
+    DESIGN_DIR = Path('designs')
+    
+    # BASELINE
+    BASELINE_DIR         = DESIGN_DIR / 'baseline'
+    BASELINE_ARCH        = BASELINE_DIR / 'arch/system_arch_2x8.yaml'
+    BASELINE_COMPONENTS  = BASELINE_DIR / 'arch/components'
+    BASELINE_CONSTRAINTS = BASELINE_DIR / 'constraints/gcn_constraints.yaml'
+    BASELINE_MAPPER      = BASELINE_DIR / 'mapper/mapper.yaml'
 
-    BASELINE_DIR   = DESIGN_DIR / 'eyeriss_like'
-
-    ARCH           = DESIGN_DIR / '2level.arch.yaml'
-    COMPONENTS_DIR = DESIGN_DIR / 'components'
-
-    UNTILED_MAP    = DESIGN_DIR / 'untiled.map.yaml'
-    TILED_MAP      = DESIGN_DIR / 'tiled.map.yaml'
-
-    GATING_SPARSE_OPT  = DESIGN_DIR / 'gatingZ.sparse_opt.yaml'
-    UNTILED_SPARSE_OPT = DESIGN_DIR / 'compress-AB-skippingZ.sparse_opt.yaml'
-    TILED_SPARSE_OPT   = DESIGN_DIR / 'compress-A-pretiled-B-skipping-Z.sparse_opt.yaml'
-
-    PROB        = DESIGN_DIR / 'matmul.prob.yaml'
-    PROB_WIDGET = DESIGN_DIR / 'matmul_vardensity.prob.yaml'
-
-    UNTILED_CONSTRAINTS = DESIGN_DIR / 'untiled.constraints.yaml'
-
-    MAPPER = DESIGN_DIR / 'mapper.yaml'
+    # PROBLEM
+    PROB_DIR    = Path('layer_shapes/GCN')
+    PROB_LAYER1 = PROB_DIR / 'GCN_layer1.yaml'
+    PROB_LAYER2 = PROB_DIR / 'GCN_layer2.yaml'
+    PROB_LAYER3 = PROB_DIR / 'GCN_layer3.yaml'
+    PROB_LAYER4 = PROB_DIR / 'GCN_layer4.yaml'
 
 def load_config(*paths):
     yaml = YAML(typ='safe')
