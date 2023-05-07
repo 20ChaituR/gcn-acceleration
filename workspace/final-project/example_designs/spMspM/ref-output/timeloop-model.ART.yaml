@@ -4,6 +4,6 @@ ART:
   - name: system.PE.MAC
     area: 332.25
   - name: system.PE.Buffer
-    area: 20231.76
+    area: 3991.76
   - name: system.BackingStorage
-    area: 124180.92
+    area: 17178.82

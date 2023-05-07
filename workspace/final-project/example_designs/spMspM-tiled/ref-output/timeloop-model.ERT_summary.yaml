@@ -17,21 +17,21 @@ ERT_summary:
   - name: system.PE.Buffer
     actions:
     - name: write
-      energy: 4.25016
+      energy: 0.42018
     - name: read
-      energy: 4.25016
+      energy: 0.42018
     - name: gated_write
-      energy: 0.0204
+      energy: 0.00441
     - name: gated_read
-      energy: 0.0204
+      energy: 0.00441
     - name: metadata_read
-      energy: 4.21416
+      energy: 0.38418
     - name: metadata_write
-      energy: 4.21416
+      energy: 0.38418
     - name: gated_metadata_read
-      energy: 0.01892
+      energy: 0.00293
     - name: gated_metadata_write
-      energy: 0.01892
+      energy: 0.00293
     primitive_estimation(s):
     - name: storage
       estimator: Aladdin_table
@@ -40,21 +40,21 @@ ERT_summary:
   - name: system.BackingStorage
     actions:
     - name: write
-      energy: 8.38383
+      energy: 3.21261
     - name: read
-      energy: 12.2951
+      energy: 2.67732
     - name: gated_write
-      energy: 0.00065
+      energy: 6.0e-05
     - name: gated_read
-      energy: 0.00065
+      energy: 6.0e-05
     - name: metadata_read
-      energy: 9.3208
+      energy: 0.84842
     - name: metadata_write
-      energy: 9.3208
+      energy: 0.84842
     - name: gated_metadata_read
-      energy: 0.04023
+      energy: 0.00487
     - name: gated_metadata_write
-      energy: 0.04023
+      energy: 0.00487
     primitive_estimation(s):
     - name: storage
       estimator: Cacti

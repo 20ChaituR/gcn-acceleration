@@ -19,51 +19,51 @@ ERT:
     actions:
     - name: write
       arguments: null
-      energy: 4.25016
+      energy: 0.88442
     - name: read
       arguments: null
-      energy: 4.25016
+      energy: 0.88442
     - name: gated_write
       arguments: null
-      energy: 0.0204
+      energy: 0.00635
     - name: gated_read
       arguments: null
-      energy: 0.0204
+      energy: 0.00635
     - name: metadata_read
       arguments: null
-      energy: 4.21416
+      energy: 0.84842
     - name: metadata_write
       arguments: null
-      energy: 4.21416
+      energy: 0.84842
     - name: gated_metadata_read
       arguments: null
-      energy: 0.01892
+      energy: 0.00487
     - name: gated_metadata_write
       arguments: null
-      energy: 0.01892
+      energy: 0.00487
   - name: system.BackingStorage
     actions:
     - name: write
       arguments: null
-      energy: 8.38383
+      energy: 3.21261
     - name: read
       arguments: null
-      energy: 12.2951
+      energy: 2.67732
     - name: gated_write
       arguments: null
-      energy: 0.00065
+      energy: 6.0e-05
     - name: gated_read
       arguments: null
-      energy: 0.00065
+      energy: 6.0e-05
     - name: metadata_read
       arguments: null
-      energy: 9.3208
+      energy: 0.84842
     - name: metadata_write
       arguments: null
-      energy: 9.3208
+      energy: 0.84842
     - name: gated_metadata_read
       arguments: null
-      energy: 0.04023
+      energy: 0.00487
     - name: gated_metadata_write
       arguments: null
-      energy: 0.04023
+      energy: 0.00487

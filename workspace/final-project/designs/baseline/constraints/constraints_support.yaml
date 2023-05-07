@@ -1,0 +1,9 @@
+mapspace:
+  targets:
+    - name: BackingStorage
+      type: bypass
+      keep: [Inputs, Weights, Support]
+      bypass: []
+    - name: BackingStorage
+      type: temporal
+      permutation: OIN

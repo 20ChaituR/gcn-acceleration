@@ -1,0 +1,30 @@
+problem:
+  shape:
+    data-spaces:
+      - name: Adj
+        projection:
+          - - - N
+          - - - M
+      - name: Support
+        projection:
+          - - - M
+          - - - O
+      - name: Outputs
+        projection:
+          - - - N
+          - - - O
+        read-write: true
+    dimensions:
+      - N
+      - M
+      - O
+    name: GCN-LayerOutput
+  instance:
+    N: 34
+    M: 34
+    O: 16
+
+    densities:
+      Adj:
+        distribution: fixed-structured
+        density: 0.135

@@ -5,14 +5,14 @@ ART_summary:
     area: 332.25
     primitive_estimations: Aladdin_table
   - name: system.PE.Buffer
-    area: 20231.76
+    area: 3991.76
     primitive_estimations:
     - name: storage
       estimator: Aladdin_table
     - name: metadata_storage
       estimator: Aladdin_table
   - name: system.BackingStorage
-    area: 124180.92
+    area: 17178.82
     primitive_estimations:
     - name: storage
       estimator: Cacti

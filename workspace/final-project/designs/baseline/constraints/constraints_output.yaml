@@ -1,0 +1,9 @@
+mapspace:
+  targets:
+    - name: BackingStorage
+      type: bypass
+      keep: [Adj, Support, Outputs]
+      bypass: []
+    - name: BackingStorage
+      type: temporal
+      permutation: OMN
