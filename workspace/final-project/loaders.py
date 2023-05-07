@@ -30,6 +30,25 @@ class ConfigRegistry:
     BASELINE_PROB_L1_OUTPUT = BASELINE_DIR / 'prob/GCN_layer1_output.yaml'
     BASELINE_PROB_L2_SUPPORT = BASELINE_DIR / 'prob/GCN_layer2_support.yaml'
     BASELINE_PROB_L2_OUTPUT = BASELINE_DIR / 'prob/GCN_layer2_output.yaml'
+    BASELINE_DIR         = DESIGN_DIR / 'baseline'
+    BASELINE_ARCH        = BASELINE_DIR / 'arch/system_arch_2x8.yaml'
+    BASELINE_COMPONENTS  = BASELINE_DIR / 'arch/components'
+    BASELINE_CONSTRAINTS = BASELINE_DIR / 'constraints/gcn_constraints.yaml'
+    BASELINE_MAPPER      = BASELINE_DIR / 'mapper/mapper.yaml'
+
+    # PROBLEM
+    PROB_DIR    = Path('layer_shapes/GCN')
+    PROB_LAYER1 = PROB_DIR / 'GCN_layer1.yaml'
+    PROB_LAYER2 = PROB_DIR / 'GCN_layer2.yaml'
+    PROB_LAYER3 = PROB_DIR / 'GCN_layer3.yaml'
+    PROB_LAYER4 = PROB_DIR / 'GCN_layer4.yaml'
+    
+    # DESIGN 1
+    DES1_DIR = DESIGN_DIR / 'des1'
+    DES1_ARCH = DES1_DIR / 'arch/arch.yaml'
+    DES1_COMPONENTS = DES1_DIR / 'arch/components'
+    DES1_CONSTRAINTS = DES1_DIR / 'constraints/constraints.yaml'
+    DES1_MAPPER = DES1_DIR / 'mapper/mapper.yaml'
 
 def load_config(*paths):
     yaml = YAML(typ='safe')

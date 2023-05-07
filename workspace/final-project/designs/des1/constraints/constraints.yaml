@@ -1,0 +1,39 @@
+mapspace:
+  targets:
+    - name: DRAM
+      type: bypass
+      keep: [Inputs, Outputs, Weights]
+      bypass: []
+    - name: global_buffer
+      type: bypass
+      keep: [Inputs, Outputs, Weights]
+      bypass: []
+    - name: global_buffer
+      type: temporal
+      permutation: ION
+    - name: global_buffer
+      type: spatial
+      factors: N=1
+      permutation: I ON
+      split: 1
+    - target: weights_reg
+      type: bypass
+      keep: [Weights]
+      bypass: [Inputs, Outputs]
+    - target: weights_reg
+      type: temporal
+      factors: N=1 I=1 O=1
+    - target: input_activation_reg
+      type: bypass
+      keep: [Inputs]
+      bypass: [Weights, Outputs]
+    - target: input_activation_reg
+      type: temporal
+      factors: N=1 I=1 O=1
+    - target: output_activation_reg
+      type: bypass
+      keep: [Outputs]
+      bypass: [Weights, Inputs]
+    - target: output_activation_reg
+      type: temporal
+      factors: N=1 I=1 O=1
