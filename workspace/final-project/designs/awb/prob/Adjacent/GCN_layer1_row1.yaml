@@ -20,14 +20,11 @@ problem:
       - O
     name: GCN-LayerOutput
   instance:
-    N: 34
+    N: 24
     M: 34
-    O: 4
+    O: 16
 
     densities:
       Adj:
         distribution: fixed-structured
-        density: 0.135
-#       Support:
-#         distribution: fixed-structured
-#         density: 0.1
+        density: 0.1

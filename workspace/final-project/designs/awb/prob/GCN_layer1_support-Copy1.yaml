@@ -1,8 +1,8 @@
 problem:
   instance:
     N: 34
-    I: 16
-    O: 4
+    I: 34
+    O: 16
   shape:
     data-spaces:
       - name: Inputs
@@ -23,8 +23,3 @@ problem:
       - I
       - O
     name: GCN-LayerSupport
-
-#     densities:
-#       Input:
-#         distribution: fixed-structured
-#         density: 0.1

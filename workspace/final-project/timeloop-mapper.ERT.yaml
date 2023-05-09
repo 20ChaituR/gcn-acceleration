@@ -1,7 +1,7 @@
 ERT:
   version: 0.3
   tables:
-  - name: system.PE.MAC
+  - name: system.PE[0..16].MAC
     actions:
     - name: mac_random
       arguments: null
@@ -15,7 +15,7 @@ ERT:
     - name: idle
       arguments: null
       energy: 0.01797
-  - name: system.PE.Buffer
+  - name: system.PE[0..16].Buffer
     actions:
     - name: write
       arguments: null

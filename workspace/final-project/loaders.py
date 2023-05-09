@@ -30,6 +30,19 @@ class ConfigRegistry:
     BASELINE_PROB_L1_OUTPUT = BASELINE_DIR / 'prob/GCN_layer1_output.yaml'
     BASELINE_PROB_L2_SUPPORT = BASELINE_DIR / 'prob/GCN_layer2_support.yaml'
     BASELINE_PROB_L2_OUTPUT = BASELINE_DIR / 'prob/GCN_layer2_output.yaml'
+    
+    # AWB
+    AWB_DIR = DESIGN_DIR / 'awb'
+    AWB_ARCH = AWB_DIR / 'arch/system_arch_1x16.yaml'
+    AWB_SPARSE_OPT = AWB_DIR / 'sparse_opt'
+    
+    AWB_ARCH_0_1 = AWB_DIR / 'arch/system_arch_1x16-row1.yaml'
+    AWB_ARCH_0_2 = AWB_DIR / 'arch/system_arch_1x16-row2.yaml'
+    AWB_PROB_L1_OUTPUT_0_1 = AWB_DIR / 'prob/Adjacent/GCN_layer1_row1.yaml'
+    AWB_PROB_L1_OUTPUT_0_2 = AWB_DIR / 'prob/Adjacent/GCN_layer1_row2.yaml'
+    
+    AWB_ARCH_1_PE = AWB_DIR / 'arch/awb_arch.yaml'
+    AWB_PROB_WIDGET_R2 = AWB_DIR / 'prob/GCN_layer1_output_widget_r2.yaml'
 
 def load_config(*paths):
     yaml = YAML(typ='safe')

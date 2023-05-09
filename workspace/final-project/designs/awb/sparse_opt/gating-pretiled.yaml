@@ -1,0 +1,26 @@
+sparse_optimizations:
+  targets:
+    - name: BackingStorage
+      representation-format:
+#         - name: Support
+#             ranks:
+#               - format: UOP
+#               - format: CP
+        - name: Adj # tiling on Adj
+          ranks:
+            - format: UOP
+            - format: CP
+
+      action-optimization:
+        - type: gating
+          options:
+            - target: Support
+              condition-on: [Adj]
+#         - type: gating
+#           options:
+#             - target: Adj
+#               condition-on: [Support]
+        - type: gating
+          options:
+            - target: Outputs
+              condition-on: [Adj]

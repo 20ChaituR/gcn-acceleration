@@ -8,6 +8,8 @@ architecture:
       data_storage_depth: 512
       data_storage_width: 8
       datawidth: 8
+      meshX: 1
+      meshY: 17
       metadata_datawidth: 4
       metadata_storage_depth: 512
       metadata_storage_width: 4
@@ -18,15 +20,17 @@ architecture:
       technology: 45nm
       write_bandwidth: 5
     class: storage
-    name: system.PE.Buffer
+    name: system.PE[0..16].Buffer
     subclass: regfile_metadata
   - attributes:
       datawidth: 8
       latency: 5ns
+      meshX: 1
+      meshY: 17
       num_pipeline_stages: 2
       technology: 45nm
     class: compute
-    name: system.PE.MAC
+    name: system.PE[0..16].MAC
     subclass: intmac
   - attributes:
       ag_datawidth: 8.317766166719343

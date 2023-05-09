@@ -14,20 +14,19 @@ config file content:
 Warn: Cannot recognize the top key "mapper" in file tmp.yaml 
 Warn: Cannot recognize the top key "mapspace" in file tmp.yaml 
 Warn: Cannot recognize the top key "problem" in file tmp.yaml 
-Warn: Cannot recognize the top key "sparse_optimizations" in file tmp.yaml 
 Info: Parsing file tmp.yaml for architecture info 
 Info: Found non-numeric expression 45nm. Available bindings: {'technology': '45nm'} 
 WARN: Failed to evaluate "45nm". Setting system.technology="45nm". Available bindings: {'technology': '45nm'}
 Info: Parsing file tmp.yaml for compound_components info 
+Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/pim_primitive_component.lib.yaml 
 Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/soc_primitives.lib.yaml 
 Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/primitive_component.lib.yaml 
-Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/pim_primitive_component.lib.yaml 
 Info: Calculated "log(data_storage_depth)" = 6.238324625039508 
-Info: Found non-numeric expression 5ns. Available bindings: {'datawidth': 8, 'technology': '45nm', 'num_pipeline_stages': 2, 'latency': '5ns'} 
-WARN: Failed to evaluate "5ns". Setting system.PE.MAC.latency="5ns". Available bindings: {'datawidth': 8, 'technology': '45nm', 'num_pipeline_stages': 2, 'latency': '5ns'}
+Info: Found non-numeric expression 5ns. Available bindings: {'datawidth': 8, 'meshX': 1, 'meshY': 17, 'technology': '45nm', 'num_pipeline_stages': 2, 'latency': '5ns'} 
+WARN: Failed to evaluate "5ns". Setting system.PE[0..16].MAC.latency="5ns". Available bindings: {'datawidth': 8, 'meshX': 1, 'meshY': 17, 'technology': '45nm', 'num_pipeline_stages': 2, 'latency': '5ns'}
 Info: Calculated "log(data_storage_depth)" = 8.317766166719343 
-Info: Found non-numeric expression avg_sparsity. Available bindings: {'block_size': 1, 'data_storage_depth': 512, 'data_storage_width': 8, 'datawidth': 8, 'metadata_datawidth': 4, 'metadata_storage_depth': 512, 'metadata_storage_width': 4, 'read_bandwidth': 5, 'write_bandwidth': 5, 'technology': '45nm', 'ag_datawidth': 6.238324625039508, 'counter_width': 0, 'n_banks': 1, 'n_rdwr_ports': 2, 'num_storage_instances': 1} 
-WARN: Failed to evaluate "avg_sparsity". Setting storage.avg_sparsity="avg_sparsity". Available bindings: {'block_size': 1, 'data_storage_depth': 512, 'data_storage_width': 8, 'datawidth': 8, 'metadata_datawidth': 4, 'metadata_storage_depth': 512, 'metadata_storage_width': 4, 'read_bandwidth': 5, 'write_bandwidth': 5, 'technology': '45nm', 'ag_datawidth': 6.238324625039508, 'counter_width': 0, 'n_banks': 1, 'n_rdwr_ports': 2, 'num_storage_instances': 1}
+Info: Found non-numeric expression avg_sparsity. Available bindings: {'block_size': 1, 'data_storage_depth': 512, 'data_storage_width': 8, 'datawidth': 8, 'meshX': 1, 'meshY': 17, 'metadata_datawidth': 4, 'metadata_storage_depth': 512, 'metadata_storage_width': 4, 'read_bandwidth': 5, 'write_bandwidth': 5, 'technology': '45nm', 'ag_datawidth': 6.238324625039508, 'counter_width': 0, 'n_banks': 1, 'n_rdwr_ports': 2, 'num_storage_instances': 1} 
+WARN: Failed to evaluate "avg_sparsity". Setting storage.avg_sparsity="avg_sparsity". Available bindings: {'block_size': 1, 'data_storage_depth': 512, 'data_storage_width': 8, 'datawidth': 8, 'meshX': 1, 'meshY': 17, 'metadata_datawidth': 4, 'metadata_storage_depth': 512, 'metadata_storage_width': 4, 'read_bandwidth': 5, 'write_bandwidth': 5, 'technology': '45nm', 'ag_datawidth': 6.238324625039508, 'counter_width': 0, 'n_banks': 1, 'n_rdwr_ports': 2, 'num_storage_instances': 1}
 Info: Calculated "data_storage_depth/num_storage_instances" = 512 
 Info: Calculated "metadata_storage_depth/num_storage_instances" = 512 
 Info: Calculated "data_storage_depth/num_storage_instances" = 4096 
@@ -39,8 +38,8 @@ Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_pl
 Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
 Info: CACTI plug-in... Querying CACTI for request:
  {'class_name': 'SRAM', 'attributes': OrderedDict([('avg_sparsity', 'avg_sparsity'), ('datawidth', 8), ('depth', 4096), ('n_banks', 1), ('n_rdwr_ports', 2), ('technology', '45nm'), ('width', 32), ('n_rd_ports', 0), ('n_wr_ports', 0), ('latency', '5ns')]), 'action_name': 'write', 'arguments': None}
-copy  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/default_SRAM.cfg  to  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.05_07_21_35_48_SRAM.cfg
-CACTI plug-in removing temp file:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.05_07_21_35_48_SRAM.cfg
+copy  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/default_SRAM.cfg  to  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.05_09_02_12_44_SRAM.cfg
+CACTI plug-in removing temp file:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.05_09_02_12_44_SRAM.cfg
 Warn: No action counts are specified as yaml input 
 Info: flattened architecture is saved to: ./timeloop-mapper.flattened_architecture.yaml 
 Info: energy reference table is saved to: ./timeloop-mapper.ERT.yaml 

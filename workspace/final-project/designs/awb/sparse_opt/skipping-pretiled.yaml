@@ -1,0 +1,39 @@
+sparse_optimizations:
+  targets:
+    - name: BackingStorage
+      representation-format:
+#         - name: Support
+#             ranks:
+#               - format: UOP
+#               - format: CP
+        - name: Adj # tiling on Adj
+          ranks:
+#             - format: UOP
+            - format: UOP
+            - format: CP
+
+#     - name: Buffer
+#       representation-format:
+#         data-spaces:
+#           - name: Adj
+#             ranks:          # each tile of B requires two ranks only
+#               - format: UOP
+#               - format: CP
+#           - name: Support
+#             ranks:
+#               - format: UOP
+#               - format: CP
+
+      action-optimization:
+        - type: skipping
+          options:
+            - target: Support
+              condition-on: [Adj]
+#         - type: skipping
+#           options:
+#             - target: Adj
+#               condition-on: [Support]
+        - type: skipping
+          options:
+            - target: Outputs
+              condition-on: [Adj]
