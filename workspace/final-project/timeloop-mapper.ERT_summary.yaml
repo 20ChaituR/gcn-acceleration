@@ -17,7 +17,18 @@ ERT_summary:
   - name: system.PE.Buffer
     actions:
     - name: write
+<<<<<<< HEAD
       energy: 4.25016
+=======
+      energy: 512
+    - name: idle
+      energy: 0
+    primitive_estimation(s):
+    - name: system_arch.DRAM
+      estimator: Cacti
+  - name: system_arch.chip.PE[0..33].scratchpad
+    actions:
+>>>>>>> bdf84f1 (HyGCN like spatial combination engine experiments)
     - name: read
       energy: 4.25016
     - name: gated_write
@@ -40,6 +51,7 @@ ERT_summary:
   - name: system.BackingStorage
     actions:
     - name: write
+<<<<<<< HEAD
       energy: 8.38383
     - name: read
       energy: 12.2951
@@ -55,6 +67,37 @@ ERT_summary:
       energy: 0.04023
     - name: gated_metadata_write
       energy: 0.04023
+=======
+      energy: 0.2256
+    primitive_estimation(s):
+    - name: storage
+      estimator: Aladdin_table
+  - name: system_arch.chip.PE[0..33].mac
+    actions:
+    - name: compute
+      energy: 3.275
+    primitive_estimation(s):
+    - name: compute
+      estimator: Aladdin_table
+  - name: system_arch.chip.PE[0..33].weights_reg
+    actions:
+    - name: access
+      energy: 0.009
+    primitive_estimation(s):
+    - name: storage
+      estimator: Aladdin_table
+  - name: system_arch.chip.PE[0..33].input_activation_reg
+    actions:
+    - name: access
+      energy: 0.009
+    primitive_estimation(s):
+    - name: storage
+      estimator: Aladdin_table
+  - name: system_arch.chip.PE[0..33].output_activation_reg
+    actions:
+    - name: access
+      energy: 0.009
+>>>>>>> bdf84f1 (HyGCN like spatial combination engine experiments)
     primitive_estimation(s):
     - name: storage
       estimator: Cacti

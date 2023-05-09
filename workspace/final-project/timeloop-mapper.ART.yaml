@@ -1,9 +1,26 @@
 ART:
   version: 0.3
   tables:
+<<<<<<< HEAD
   - name: system.PE.MAC
     area: 332.25
   - name: system.PE.Buffer
     area: 20231.76
   - name: system.BackingStorage
     area: 124180.92
+=======
+  - name: system_arch.chip.global_buffer
+    area: 7021.76
+  - name: system_arch.DRAM
+    area: 0
+  - name: system_arch.chip.PE[0..33].scratchpad
+    area: 292.555
+  - name: system_arch.chip.PE[0..33].mac
+    area: 1726.5
+  - name: system_arch.chip.PE[0..33].weights_reg
+    area: 5.98
+  - name: system_arch.chip.PE[0..33].input_activation_reg
+    area: 5.98
+  - name: system_arch.chip.PE[0..33].output_activation_reg
+    area: 5.98
+>>>>>>> bdf84f1 (HyGCN like spatial combination engine experiments)

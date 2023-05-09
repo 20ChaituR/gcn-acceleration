@@ -1,0 +1,40 @@
+sparse_optimizations:
+  targets:
+    - name: BackingStorage
+      representation-format:
+        data-spaces:
+          - name: Inputs
+            ranks:           # no tiling on A, so two ranks needed
+              - format: UOP
+              - format: CP
+          - name: Weights          # pretiling is required, so B's is represented with 3 ranks
+            ranks:
+              - format: UOP
+              - format: UOP
+              - format: CP
+
+    - name: Buffer
+      representation-format:
+        data-spaces:
+          - name: Weights
+            ranks:          # each tile of B requires two ranks only
+              - format: UOP
+              - format: CP
+          - name: Inputs
+            ranks:
+              - format: UOP
+              - format: CP
+
+      action-optimization:
+        - type: skipping
+          options:
+            - target: Inputs
+              condition-on: [ Weights ]
+        - type: skipping
+          options:
+            - target: Outputs
+              condition-on: [ Inputs ]
+        - type: skipping
+          options:
+            - target: Outputs
+              condition-on: [ Inputs, Weights ]

@@ -29,7 +29,7 @@ mapspace:
       bypass: [Weights, Outputs]
     - target: input_activation_reg
       type: temporal
-      factors: N=1 I=1 O=1
+      factors: N=1 I=1
     - target: output_activation_reg
       type: bypass
       keep: [Outputs]

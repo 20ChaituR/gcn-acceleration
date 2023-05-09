@@ -17,7 +17,7 @@
 							<t_>1</t_>
 						</instances>
 						<meshX>
-							<t_>1</t_>
+							<t_>34</t_>
 						</meshX>
 						<meshY>
 							<t_>1</t_>
@@ -80,14 +80,9 @@
 							<t_>1</t_>
 						</instances>
 						<meshX>
-							<t_>1</t_>
+							<t_>34</t_>
 						</meshX>
 						<meshY>
-<<<<<<< HEAD
-							<t_>1</t_>
-=======
-							<t_>16</t_>
->>>>>>> 6037352 (.)
 						</meshY>
 						<shared_bandwidth class_id="15" tracking_level="0" version="0"></shared_bandwidth>
 						<read_bandwidth>
@@ -501,14 +496,14 @@
 							<spacetime_dimension>0</spacetime_dimension>
 						</item>
 						<item>
-							<dimension>1</dimension>
+							<dimension>0</dimension>
 							<start>0</start>
 							<end>34</end>
 							<stride>1</stride>
 							<spacetime_dimension>0</spacetime_dimension>
 						</item>
 						<item>
-							<dimension>0</dimension>
+							<dimension>2</dimension>
 							<start>0</start>
 							<end>17</end>
 							<stride>1</stride>

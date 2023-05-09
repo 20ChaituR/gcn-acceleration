@@ -1,0 +1,39 @@
+sparse_optimizations:
+  targets:
+    - name: BackingStorage
+      representation-format:
+        data-spaces:
+          - name: Inputs
+            ranks:
+              - format: UOP
+              - format: CP
+          - name: Weights
+            ranks:
+              - format: UOP
+              - format: CP
+
+    - name: Buffer
+      representation-format:
+        data-spaces:
+          - name: Weights
+            ranks:
+              - format: UOP # uncompressed offset pair
+              - format: CP  # coordinate payload
+          - name: Inputs
+            ranks:
+              - format: UOP # uncompressed offset pair
+              - format: CP  # coordinate payload
+
+      action-optimization:
+        - type: skipping
+          options:
+            - target: Inputs
+              condition-on: [ Weights ]
+        - type: skipping
+          options:
+            - target: Weights
+              condition-on: [ Inputs ]
+        - type: skipping
+          options:
+            - target: Outputs
+              condition-on: [ Inputs, Weights ]

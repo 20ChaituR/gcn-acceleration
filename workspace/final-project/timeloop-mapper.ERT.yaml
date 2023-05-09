@@ -19,7 +19,16 @@ ERT:
     actions:
     - name: write
       arguments: null
+<<<<<<< HEAD
       energy: 4.25016
+=======
+      energy: 512
+    - name: idle
+      arguments: null
+      energy: 0
+  - name: system_arch.chip.PE[0..33].scratchpad
+    actions:
+>>>>>>> bdf84f1 (HyGCN like spatial combination engine experiments)
     - name: read
       arguments: null
       energy: 4.25016
@@ -45,6 +54,7 @@ ERT:
     actions:
     - name: write
       arguments: null
+<<<<<<< HEAD
       energy: 8.38383
     - name: read
       arguments: null
@@ -56,6 +66,27 @@ ERT:
       arguments: null
       energy: 0.00065
     - name: metadata_read
+=======
+      energy: 0.2256
+  - name: system_arch.chip.PE[0..33].mac
+    actions:
+    - name: compute
+      arguments: null
+      energy: 3.275
+  - name: system_arch.chip.PE[0..33].weights_reg
+    actions:
+    - name: access
+      arguments: null
+      energy: 0.009
+  - name: system_arch.chip.PE[0..33].input_activation_reg
+    actions:
+    - name: access
+      arguments: null
+      energy: 0.009
+  - name: system_arch.chip.PE[0..33].output_activation_reg
+    actions:
+    - name: access
+>>>>>>> bdf84f1 (HyGCN like spatial combination engine experiments)
       arguments: null
       energy: 9.3208
     - name: metadata_write

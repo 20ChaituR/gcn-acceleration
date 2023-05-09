@@ -49,6 +49,11 @@ class ConfigRegistry:
     DES1_COMPONENTS = DES1_DIR / 'arch/components'
     DES1_CONSTRAINTS = DES1_DIR / 'constraints/constraints.yaml'
     DES1_MAPPER = DES1_DIR / 'mapper/mapper.yaml'
+    
+    # Sparsity Design WHH
+    DES2_DIR = DESIGN_DIR / 'des2'
+    UNTILED_SPARSE_OPT = DES2_DIR / 'skip_until.yaml'
+    TILED_SPARse_OPT = DES2_DIR / 'skip_til.yaml'
 
 def load_config(*paths):
     yaml = YAML(typ='safe')
