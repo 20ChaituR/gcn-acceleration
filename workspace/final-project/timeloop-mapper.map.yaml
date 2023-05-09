@@ -2,10 +2,11 @@ mapping:
   - target: Buffer
     type: datatype
     keep:
-      - Support
-      - Outputs
+      []
     bypass:
       - Adj
+      - Support
+      - Outputs
   - target: BackingStorage
     type: datatype
     keep:
@@ -16,9 +17,9 @@ mapping:
       []
   - target: Buffer
     type: temporal
-    factors: N1 M1 O2
-    permutation: ONM
+    factors: N34 M34 O16
+    permutation: NMO
   - target: BackingStorage
     type: temporal
-    factors: N34 M34 O2
-    permutation: OMN
+    factors: N1 M1 O1
+    permutation: NMO

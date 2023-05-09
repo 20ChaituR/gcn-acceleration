@@ -30,6 +30,19 @@ class ConfigRegistry:
     BASELINE_PROB_L1_OUTPUT = BASELINE_DIR / 'prob/GCN_layer1_output.yaml'
     BASELINE_PROB_L2_SUPPORT = BASELINE_DIR / 'prob/GCN_layer2_support.yaml'
     BASELINE_PROB_L2_OUTPUT = BASELINE_DIR / 'prob/GCN_layer2_output.yaml'
+    
+    # EnGN
+    ENGN_DIR = DESIGN_DIR / 'EnGN'
+    ENGN_ARCH = ENGN_DIR / 'arch/EnGN.yaml'
+    ENGN_COMPONENTS = ENGN_DIR / 'arch/components'
+    ENGN_MAPPER = ENGN_DIR / 'mapper/mapper.yaml'
+    ENGN_SPARSE_OPT = ENGN_DIR / 'sparse-opt'
+    ENGN_CONSTRAINTS_SUPPORT = ENGN_DIR / 'constraints/constraints_support.yaml'
+    ENGN_CONSTRAINTS_OUTPUT = ENGN_DIR / 'constraints/constraints_output.yaml'
+    ENGN_PROB_L1_SUPPORT = ENGN_DIR / 'prob/GCN_layer1_support.yaml'
+    ENGN_PROB_L1_OUTPUT = ENGN_DIR / 'prob/GCN_layer1_output.yaml'
+    ENGN_PROB_L2_SUPPORT = ENGN_DIR / 'prob/GCN_layer2_support.yaml'
+    ENGN_PROB_L2_OUTPUT = ENGN_DIR / 'prob/GCN_layer2_output.yaml'
 
 def load_config(*paths):
     yaml = YAML(typ='safe')

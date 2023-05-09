@@ -1,0 +1,6 @@
+mapper:
+  optimization-metrics: [delay, energy]
+  live-status: False
+  diagnostics: False
+  num-threads: 4
+  timeout: 15000
